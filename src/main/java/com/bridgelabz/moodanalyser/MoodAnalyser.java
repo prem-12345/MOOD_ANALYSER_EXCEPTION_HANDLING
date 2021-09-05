@@ -10,4 +10,13 @@ public class MoodAnalyser {
         }
 
     }
+
+    public String analyseAnyMood(String message){   /* Mood analyser method for any mood */
+        if(message.contains("sad")){
+            return "SAD";
+        }else {
+            return "HAPPY";
+        }
+
+    }
 }
