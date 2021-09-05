@@ -6,13 +6,16 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MoodAnalyserTest {
 
-    /* This test case expected sad mood */
+    /* Handle exception when user provide null */
     @Test
-    public void givenMoodMessage_contains_happy_shouldReturn_sad() {
-        MoodAnalyser moodAnalyser = new MoodAnalyser("I am in happy mood");
+    public void givenMoodMessage_contains_null_shouldReturn_happy() {
+
+        MoodAnalyser moodAnalyser = new MoodAnalyser(null);
         String mood = moodAnalyser.analyseMood();
-        assertEquals("SAD",mood);
+        assertEquals("HAPPY",mood);
+
     }
 
 
 }
+

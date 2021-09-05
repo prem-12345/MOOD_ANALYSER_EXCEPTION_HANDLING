@@ -4,17 +4,20 @@ public class MoodAnalyser {
 
     private String message;
 
-    public MoodAnalyser(String message){      /* Refactor the code to take mood message in constructer */
+    public MoodAnalyser(String message){
         this.message = message;
     }
 
-    public String analyseMood(){
-        if(message.contains("happy")){
-            return "SAD";
-        }else {
+    public String analyseMood() {
+        try {
+            if (message.contains("sad")) {
+                return "SAD";
+            } else {
+                return "HAPPY";
+            }
+        }catch (NullPointerException e){
             return "HAPPY";
         }
-
     }
 
 }
