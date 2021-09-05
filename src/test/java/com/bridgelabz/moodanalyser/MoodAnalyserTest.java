@@ -22,6 +22,5 @@ public class MoodAnalyserTest {
         assertEquals("SAD",mood);
     }
 
-
-
+    
 }
