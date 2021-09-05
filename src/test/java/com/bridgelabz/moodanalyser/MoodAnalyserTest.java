@@ -9,24 +9,18 @@ public class MoodAnalyserTest {
     /* This test case expected happy mood */
     @Test
     public void givenMoodMessage_contains_happy_shouldReturn_happy() {
-        MoodAnalyser moodAnalyser = new MoodAnalyser();
-        String mood = moodAnalyser.analyseMood("I am in happy mood");
+        MoodAnalyser moodAnalyser = new MoodAnalyser("I am in happy mood");
+        String mood = moodAnalyser.analyseMood();
         assertEquals("HAPPY",mood);
     }
 
     /* This test case expected sad mood */
     @Test
     public void givenMoodMessage_contains_sad_shouldReturn_sad() {
-        MoodAnalyser moodAnalyser = new MoodAnalyser();
-        String mood = moodAnalyser.analyseMood("I am in sad mood");
+        MoodAnalyser moodAnalyser = new MoodAnalyser("I am in sad mood");
+        String mood = moodAnalyser.analyseMood();
         assertEquals("SAD",mood);
     }
 
-    /* This test case expected any mood */
-    @Test
-    public void givenMoodMessage_contains_anyMood_shouldReturn_happy() {
-        MoodAnalyser moodAnalyser = new MoodAnalyser();
-        String mood = moodAnalyser.analyseAnyMood("I am in any mood");
-        assertEquals("HAPPY",mood);
-    }
+
 }
