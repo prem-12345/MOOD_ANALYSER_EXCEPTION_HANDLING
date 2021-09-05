@@ -21,6 +21,5 @@ public class MoodAnalyserTest {
         String mood = moodAnalyser.analyseMood();
         assertEquals("SAD",mood);
     }
-
-
+    
 }
